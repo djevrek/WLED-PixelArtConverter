@@ -93,7 +93,7 @@ To activate appent "?dev" to the url, like http://[your-device-ip]/pixartmin.htm
 ## Current notes
 
 ### http, https and the issue with **mixed content** in web browsers
-As a security meassure web browser do not allow you to access resources (web panges and web services) through http (un encrypted) from a page (like PixelArtConverter) when it is loaded through https (encrypted). Also public webservers (like [ledcalculator.werkstrom.com](https://ledcalculator.werkstrom.com)) "must" (in practise) use https. This means two things.
+As a security meassure web browser do not allow you to access resources (web pages and web services) through http (un encrypted) from a page (like PixelArtConverter) when it is loaded through https (encrypted). Also public webservers (like [ledcalculator.werkstrom.com](https://ledcalculator.werkstrom.com)) "must" (in practice) use https. This means two things.
 
 1. In order to upload directly to your device, PixelArtConverter **must** be loaded in the same security context (http/https) as WLED. Since most WLED devices are local, IoT devices it's mainly http. That's why you need to download the files and run them locally. A more convenient sollution is to have WLED serve you the page directly as that will solve any issues with possible missmatch. As of today you can set this up manually by uploading the files to your device @ [your.device.ip]/edit and then loading it to your browser using [your.device.ip]/index.html. We're looking into adding it in a more convenient way.
 2. You cannot use the tool @ [ledcalculator.werkstrom.com](https://ledcalculator.werkstrom.com) to upload **directly** to your device. The generated JSON, CURL and Home Assistant code will work just fine though.
